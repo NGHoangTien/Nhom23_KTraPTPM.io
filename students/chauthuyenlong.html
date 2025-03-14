@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang cá nhân - Châu Thuyên Long</title>
+  <!-- CSS nội bộ -->
+  <style>
+    /* RESET cơ bản */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* BODY */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* HEADER & NAV */
+    header {
+      background-color: #007bff;
+      padding: 1rem;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+
+    /* CONTAINER CHUNG CHO MỖI SECTION */
+    .container {
+      max-width: 800px;
+      margin: 1rem auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* PROFILE SECTION */
+    #profile h1 {
+      margin-bottom: 1rem;
+      color: #222;
+    }
+    .avatar-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .avatar-section img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      margin-right: 1.5rem;
+    }
+    .avatar-section form label {
+      font-weight: bold;
+    }
+    .personal-info p {
+      margin: 0.5rem 0;
+    }
+
+    /* EDUCATION, SKILLS, PROJECTS, CONTACT */
+    section h2 {
+      margin-bottom: 1rem;
+      color: #222;
+    }
+    ul {
+      margin-left: 1.5rem;
+      list-style-type: disc;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <a href="../index.html">Trang chủ</a>
+      <!-- Thêm link khác nếu cần -->
+    </nav>
+  </header>
+
+  <!-- PHẦN THÔNG TIN CÁ NHÂN -->
+  <section id="profile" class="container">
+    <h1>Châu Thuyên Long</h1>
+    <div class="avatar-section">
+      <!-- Ảnh đại diện (preview) -->
+      <img
+        id="avatarPreview"
+        src="../assets/images/default-avatar.jpg"
+        alt="Ảnh đại diện"
+      />
+    </div>
+    <div class="personal-info">
+      <p><strong>Sở thích:</strong> Game, Xem phim, Du lịch, Đọc sách</p>
+      <p><strong>Định hướng nghề nghiệp:</strong> Software Developer</p>
+    </div>
+  </section>
+
+  <!-- QUÁ TRÌNH HỌC TẬP -->
+  <section id="education" class="container">
+    <h2>Quá trình học tập</h2>
+    <ul>
+      <li>Cấu trúc dữ liệu và giải thuật</li>
+      <li>Toán rời rạc</li>
+      <li>Lập trình hướng đối tượng</li>
+      <!-- ... Các môn học khác sẽ bổ sung sau -->
+    </ul>
+  </section>
+
+  <!-- KỸ NĂNG -->
+  <section id="skills" class="container">
+    <h2>Kỹ năng</h2>
+    <p>(Sẽ bổ sung sau)</p>
+  </section>
+
+  <!-- DỰ ÁN CÁ NHÂN -->
+  <section id="projects" class="container">
+    <h2>Dự án cá nhân</h2>
+    <p>(Sẽ bổ sung sau)</p>
+  </section>
+
+  <!-- LIÊN HỆ -->
+  <section id="contact" class="container">
+    <h2>Liên hệ</h2>
+    <p>(Sẽ bổ sung sau: Email, LinkedIn, GitHub...)</p>
+  </section>
+
+  <!-- JS - Hiển thị ảnh preview sau khi chọn -->
+  <script>
+    const avatarInput = document.getElementById('avatarInput');
+    const avatarPreview = document.getElementById('avatarPreview');
+
+    avatarInput.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        avatarPreview.src = URL.createObjectURL(file);
+      }
+    });
+  </script>
+</body>
+</html>
